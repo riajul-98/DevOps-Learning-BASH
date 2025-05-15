@@ -14,9 +14,13 @@ read user_choice
 
 if [ "$user_choice" -eq 1 ]
 then
+    echo "Current Disk Usage is: "
+    echo "----------------------------------------------"
     df -h
 elif [ "$user_choice" -eq 2 ]
 then
+    echo "System Uptime is:"
+    echo "----------------------------------------------"
     uptime
 elif [ "$user_choice" -eq 3 ]
 then
@@ -33,6 +37,8 @@ then
 
     ls -1t | tail -n +4 | xargs rm -rf
     
+    echo "Directory Backup Complete!"
+
 elif [ "$user_choice" -eq 4 ]
 then
 

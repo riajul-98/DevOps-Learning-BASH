@@ -11,3 +11,5 @@ cp -r "$source_dir" "$backup_path"
 cd "$backup_dir" || exit 1
 
 ls -1t | tail -n +6 | xargs rm -rf
+
+echo "Directory has been backed up!"
