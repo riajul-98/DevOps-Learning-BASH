@@ -12,12 +12,18 @@ read user_choice
 
 if [ "$user_choice" -eq 1 ]
 then
+    echo "Disk Usage is"
+    echo "------------------------------"
     df -h
 elif [ "$user_choice" -eq 2 ]
 then
+    echo "System uptime is"
+    echo "------------------------------"
     uptime
 elif [ "$user_choice" -eq 3 ]
 then
+    echo "Users on the system"
+    echo "------------------------------"
     awk -F':' '{ print $1}' /etc/passwd
 else
     echo "Unknown input. Please try again"
